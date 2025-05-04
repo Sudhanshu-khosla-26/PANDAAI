@@ -3,7 +3,7 @@ import { GoogleGenerativeAI } from "@google/generative-ai"
 
 const genAI = new GoogleGenerativeAI(process.env.GOOGLE_AI_KEY);
 const model = genAI.getGenerativeModel({
-    model: "gemini-1.5-flash",
+    model: "gemini-1.5-pro",
     generationConfig: {
         responseMimeType: "application/json",
         temperature: 0.4,
@@ -91,6 +91,15 @@ const model = genAI.getGenerativeModel({
        user:Hello 
        response:{
        "text":"Hello, How can I help you today?"
+       }
+       
+       </example>
+
+       <example>
+
+       user:What is your name?
+       response:{
+       "text": "I'm currently running as a large language model, trained by Google. I don't have a name in the traditional sense. You can refer to me as "PANDAAI" if you like."
        }
        
        </example>

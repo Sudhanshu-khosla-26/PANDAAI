@@ -1,6 +1,5 @@
 import socket from 'socket.io-client';
 
-
 let socketInstance = null;
 
 
@@ -16,7 +15,6 @@ export const initializeSocket = (projectId) => {
     });
 
     return socketInstance;
-
 }
 
 export const receiveMessage = (eventName, cb) => {

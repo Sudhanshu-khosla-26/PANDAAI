@@ -2,10 +2,7 @@ import userModel from '../models/user.model.js';
 
 
 
-export const createUser = async ({
-    email, password
-}) => {
-
+export const createUser = async ({ email, password }) => {
     if (!email || !password) {
         throw new Error('Email and password are required');
     }
@@ -23,7 +20,7 @@ export const createUser = async ({
 
 export const getAllUsers = async ({ userId }) => {
     const users = await userModel.find({
-        _id: { $ne: userId }
+        _id: { $ne: userId } // ne: gives data which id is not equal to userid
     });
     return users;
 }
